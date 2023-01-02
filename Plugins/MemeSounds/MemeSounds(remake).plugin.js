@@ -4,8 +4,8 @@
  * @description Plays Memetastic sounds depending on what is being sent in chat. This was heavily inspired by the idea of Metalloriff's bruh plugin so go check him out! this is a remake of Lonk#6942 and FlyMaster#2642 MemeSounds plugin but i added my own sound library
  * @author BallisticOK#8864
  * @authorId 321590712665636865
- * @source https://atomicgaming666.com/MemeSounds/MemeSounds(remake).plugin.js
- * @updateUrl https://atomicgaming666.com/MemeSounds/MemeSounds(remake).plugin.js
+ * @source https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Plugins/MemeSounds/MemeSounds(remake).plugin.js
+ * @updateUrl https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Plugins/MemeSounds/MemeSounds(remake).plugin.js
  */
 module.exports = (() => {
 
@@ -19,61 +19,61 @@ module.exports = (() => {
             }],
             version: "1.0.3",
             description: "Plays Memetastic sounds depending on what is being sent in chat. This was heavily inspired by the idea of Metalloriff's bruh plugin so go check him out!",
-            github: "https://atomicgaming666.com/MemeSounds/MemeSounds(remake).plugin.js",
-            github_raw: "https://atomicgaming666.com/MemeSounds/MemeSounds(remake).plugin.js"
+            github: "https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Plugins/MemeSounds/MemeSounds(remake).plugin.js",
+            github_raw: "https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Plugins/MemeSounds/MemeSounds(remake).plugin.js"
         },
         defaultConfig: [{
-                id: "setting",
-                name: "Sound Settings",
-                type: "category",
-                collapsible: true,
-                shown: true,
-                settings: [{
-                    id: "LimitChan",
-                    name: "Limit to the current channel only.",
-                    note: "When enabled, sound effects will only play within the currently selected channel.",
-                    type: "switch",
-                    value: true
-                }, {
-                    id: "delay",
-                    name: "Sound effect delay.",
-                    note: "The delay in miliseconds between each sound effect.",
-                    type: "slider",
-                    value: 200,
-                    min: 10,
-                    max: 1000,
-                    renderValue: v => Math.round(v) + "ms"
-                }, {
-                    id: "volume",
-                    name: "Sound effect volume.",
-                    note: "How loud the sound effects will be.",
-                    type: "slider",
-                    value: 1,
-                    min: 0.01,
-                    max: 1,
-                    renderValue: v => Math.round(v * 100) + "%"
-                }]
+            id: "setting",
+            name: "Sound Settings",
+            type: "category",
+            collapsible: true,
+            shown: true,
+            settings: [{
+                id: "LimitChan",
+                name: "Limit to the current channel only.",
+                note: "When enabled, sound effects will only play within the currently selected channel.",
+                type: "switch",
+                value: true
+            }, {
+                id: "delay",
+                name: "Sound effect delay.",
+                note: "The delay in miliseconds between each sound effect.",
+                type: "slider",
+                value: 200,
+                min: 10,
+                max: 1000,
+                renderValue: v => Math.round(v) + "ms"
+            }, {
+                id: "volume",
+                name: "Sound effect volume.",
+                note: "How loud the sound effects will be.",
+                type: "slider",
+                value: 1,
+                min: 0.01,
+                max: 1,
+                renderValue: v => Math.round(v * 100) + "%"
+            }]
+        },
+        {
+            id: "setting",
+            name: "Sound Toggle",
+            type: "category",
+            collapsible: true,
+            shown: true,
+            settings: [{
+                name: "How to toggle sound (TEMP)",
+                note: "Just go into the code and look for `const sounds` it sould be close to the top find the sound you want to turn off and put // in front of the `{re:`",
+                type: "switch"
             },
             {
-                id: "setting",
-                name: "Sound Toggle",
-                type: "category",
-                collapsible: true,
-                shown: true,
-                settings: [{
-                    name: "How to toggle sound (TEMP)",
-                    note: "Just go into the code and look for `const sounds` it sould be close to the top find the sound you want to turn off and put // in front of the `{re:`",
-                    type: "switch"
-                },
-				{
-                    id: "1",
-					name: "Bruh",
-                    note: "Toggle the Bruh sound",
-                    type: "switch"
-					
-				}]
+                id: "1",
+                name: "Bruh",
+                note: "Toggle the Bruh sound",
+                type: "switch"
 
-            }
+            }]
+
+        }
         ],
         changelog: [{
             title: "New Stuff",
@@ -114,8 +114,8 @@ module.exports = (() => {
                 }
             });
         }
-        start() {}
-        stop() {}
+        start() { }
+        stop() { }
     } : (([Plugin, Api]) => {
 
         const plugin = (Plugin, Api) => {
@@ -129,72 +129,72 @@ module.exports = (() => {
                     }
                 } = Api;
                 const sounds = [{
-                        re: /no?ice/gmi,
-                        file: "noice.mp3",
-                        duration: 600,
-                    },
-                    {
-                        re: /bazinga/gmi,
-                        file: "bazinga.mp3",
-                        duration: 550
-                    },
-                    {
-                        re: /oof/gmi,
-                        file: "oof.mp3",
-                        duration: 250
-                    },
-                    {
-                        toggle: 1,
-                        re: /bruh/gmi,
-                        file: "bruh.mp3",
-                        duration: 470
-                    },
-                    //{re: /🗿/gmi, file: "moyai.mp3", duration: 100},
-                    {
-                        re: /chicken/gmi,
-                        file: "chicken.mp3",
-                        duration: 100
-                    },
-                    {
-                        re: /9001/gmi,
-                        file: "9001.mp3",
-                        duration: 100
-                    },
-                    {
-                        re: /gay/gmi,
-                        file: "gay.mp3",
-                        duration: 100
-                    },
-                    {
-                        re: /lol/gmi,
-                        file: "lol.mp3",
-                        duration: 100
-                    },
-                    {
-                        re: /ok/gmi,
-                        file: "ok.mp3",
-                        duration: 100
-                    },
-                    {
-                        re: /omg/gmi,
-                        file: "omg.mp3",
-                        duration: 100
-                    },
-                    {
-                        re: /toasty/gmi,
-                        file: "toasty.mp3",
-                        duration: 100
-                    },
-                    {
-                        re: /free/gmi,
-                        file: "free.mp3",
-                        duration: 100
-                    },
-                    {
-                        re: /xD/gmi,
-                        file: "xD.mp3",
-                        duration: 100
-                    }
+                    re: /no?ice/gmi,
+                    file: "noice.mp3",
+                    duration: 600,
+                },
+                {
+                    re: /bazinga/gmi,
+                    file: "bazinga.mp3",
+                    duration: 550
+                },
+                {
+                    re: /oof/gmi,
+                    file: "oof.mp3",
+                    duration: 250
+                },
+                {
+                    toggle: 1,
+                    re: /bruh/gmi,
+                    file: "bruh.mp3",
+                    duration: 470
+                },
+                //{re: /🗿/gmi, file: "moyai.mp3", duration: 100},
+                {
+                    re: /chicken/gmi,
+                    file: "chicken.mp3",
+                    duration: 100
+                },
+                {
+                    re: /9001/gmi,
+                    file: "9001.mp3",
+                    duration: 100
+                },
+                {
+                    re: /gay/gmi,
+                    file: "gay.mp3",
+                    duration: 100
+                },
+                {
+                    re: /lol/gmi,
+                    file: "lol.mp3",
+                    duration: 100
+                },
+                {
+                    re: /ok/gmi,
+                    file: "ok.mp3",
+                    duration: 100
+                },
+                {
+                    re: /omg/gmi,
+                    file: "omg.mp3",
+                    duration: 100
+                },
+                {
+                    re: /toasty/gmi,
+                    file: "toasty.mp3",
+                    duration: 100
+                },
+                {
+                    re: /free/gmi,
+                    file: "free.mp3",
+                    duration: 100
+                },
+                {
+                    re: /xD/gmi,
+                    file: "xD.mp3",
+                    duration: 100
+                }
                 ];
 
                 /* Double message event fix */
@@ -233,7 +233,7 @@ module.exports = (() => {
                                 let audio = new Audio("https://github.com/Lonk12/BetterDiscordPlugins/raw/main/MemeSounds/Sounds/" + sound[1].file);
                                 audio.volume = this.settings.setting.volume;
                                 audio.play();
-                                let audio2 = new Audio("https://atomicgaming666.com/MemeSounds/Sounds/" + sound[1].file);
+                                let audio2 = new Audio("https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Plugins/MemeSounds/Sounds/" + sound[1].file);
                                 audio2.volume = this.settings.setting.volume;
                                 audio2.play();
                                 await new Promise(r => setTimeout(r, sound[1].duration + this.settings.setting.delay));
