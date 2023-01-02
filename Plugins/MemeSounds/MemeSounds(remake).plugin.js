@@ -1,6 +1,6 @@
 /**
  * @name MemeSounds (Remake)
- * @version 1.0.3
+ * @version 1.0.4
  * @description Plays Memetastic sounds depending on what is being sent in chat. This was heavily inspired by the idea of Metalloriff's bruh plugin so go check him out! this is a remake of Lonk#6942 and FlyMaster#2642 MemeSounds plugin but i added my own sound library
  * @author BallisticOK#8864
  * @authorId 321590712665636865
