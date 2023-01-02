@@ -17,7 +17,7 @@ module.exports = (() => {
                 name: "BallisticOK#8864",
                 discord_id: "321590712665636865",
             }],
-            version: "1.0.3",
+            version: "1.0.4",
             description: "Plays Memetastic sounds depending on what is being sent in chat. This was heavily inspired by the idea of Metalloriff's bruh plugin so go check him out!",
             github: "https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Plugins/MemeSounds/MemeSounds(remake).plugin.js",
             github_raw: "https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Plugins/MemeSounds/MemeSounds(remake).plugin.js"
