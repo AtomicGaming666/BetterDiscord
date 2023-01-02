@@ -1,0 +1,95 @@
+/**
+ * @name BasicCord
+ * @version 1.5
+ * @description Theme based on Visual Studio Code design. Credit to userMacieG#7591 for allowing me to use stuff from his Discord.tv theme.
+ * @author BallisticOK#8864
+ * @updateUrl https://atomicgaming666.com/site/assets/discord/themes/Main.theme.css
+*/
+
+@import url("https://atomicgaming666.com/site/assets/discord/themes/Basic.theme.css");
+@import url('https://atomicgaming666.com/site/assets/discord/themes/badges.css');
+@import url(https://maendisease.github.io/BetterDiscordStuff/css/ProfileBannerSkins.css);
+@import url(https://dablulite.github.io/redesigneduserareas/import.css);
+@import url('https://atomicgaming666.com/site/assets/discord/themes/accountcolumns.css');
+:root{
+    --badge-size: 22px; /*discord defualt = 18px, theme defualt = 22px;*/
+    --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
+    --badges-everywhere-size: 15px; /*default = 15px*/
+	--background-mentioned: rgba(2,6,105,0.2);
+	--roles-roundness: 0; /* change the 0 to any other number if you want the roles to be fully round */
+	--roles-roundness-calc: calc((var(--roles-roundness) + .21) * 25px)
+	
+}
+
+/* change colors here */
+/* a color picker should show up if you hover over the "hsl(x, y, z)" part */
+.theme-dark {
+	/* main accent color */
+	--accent-color: hsl(190, 60%, 50%);
+	/* color of accent color buttons on hover */
+	--accent-color-2: hsl(190, 60%, 55%);
+	/* color of accent color buttons on click */
+	--accent-color-3: hsl(190, 60%, 40%);
+	/* link color */
+	--link-color: hsl(190, 90%, 50%);
+	/* user mention background */
+	--mention-background: hsl(190, 60%, 50%, 0.3);
+	/* background of messages that mention you */
+	--mentioned-background: hsla(190, 60%, 50%, 0.1);
+	/* background of messages that mention you on hover */
+	--mentioned-hover-background: hsla(190, 60%, 50%, 0.08);
+	/* main text color (messages, titles, unread text/indicators) */
+	--primary-text: hsl(220, 15%, 60%);
+	/* secondary text color (channels, descriptions, buttons) */
+	--secondary-text: hsl(220, 15%, 40%);
+	/* muted text color (input box placeholders, muted channels, message times) */
+	--muted-text: hsl(220, 15%, 20%);
+	/* main chat/channel list/member list background */
+	--primary-background: hsl(220, 15%, 10%);
+	/* background of pretty much everything else */
+	--secondary-background: hsl(220, 15%, 13%);
+	/* scrollbar thumb color */
+	--scrollbar-color: hsl(220, 15%, 11%);
+	/* color of things on hover */
+	--hover-modifier: hsla(220, 15%, 20%, 0.1);
+	/* color of things when clicked */
+	--active-modifier: hsla(220, 15%, 20%, 0.2);
+	/* color of things when selected */
+	--selected-modifier: hsla(220, 15%, 20%, 0.3);
+	/* amount of glow (set to 0 to disable) */
+	--glow-amount: 10px;
+}
+/* Floating Userpanel */
+.panels-3wFtMD {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  border: 1px solid var(--background-secondary);
+  border-radius: 20px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.45);
+}
+.role-2TIOKu {
+  transform: translate(0);
+  border: 0;
+  border-radius: var(--roles-roundness-calc);
+}
+.role-2TIOKu .roleRemoveIcon-387wKV {
+  margin: 0;
+  left: unset;
+  transform: translate(50%,-50%);
+}
+.role-2TIOKu .roleRemoveButton-17oXnT{position: static}
+.role-2TIOKu .roleCircle-3K9O3d:before {
+  content: '';
+  top: 0;left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  background: inherit;
+  border-radius: var(--roles-roundness-calc);
+  border: 2px solid transparent;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+}
