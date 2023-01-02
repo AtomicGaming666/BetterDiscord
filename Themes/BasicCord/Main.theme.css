@@ -3,14 +3,14 @@
  * @version 1.5
  * @description Theme based on Visual Studio Code design. Credit to userMacieG#7591 for allowing me to use stuff from his Discord.tv theme.
  * @author BallisticOK#8864
- * @updateUrl https://atomicgaming666.com/site/assets/discord/themes/Main.theme.css
+ * @updateUrl https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Themes/BasicCord/Main.theme.css
 */
 
-@import url("https://atomicgaming666.com/site/assets/discord/themes/Basic.theme.css");
-@import url('https://atomicgaming666.com/site/assets/discord/themes/badges.css');
-@import url(https://maendisease.github.io/BetterDiscordStuff/css/ProfileBannerSkins.css);
-@import url(https://dablulite.github.io/redesigneduserareas/import.css);
-@import url('https://atomicgaming666.com/site/assets/discord/themes/accountcolumns.css');
+@import url("https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Themes/BasicCord/Basic.theme.css");
+@import url("https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Themes/BasicCord/badges.css");
+@import url("https://maendisease.github.io/BetterDiscordStuff/css/ProfileBannerSkins.css");
+@import url("https://dablulite.github.io/redesigneduserareas/import.css");
+@import url('https://raw.githubusercontent.com/AtomicGaming666/BetterDiscord/main/Themes/BasicCord/accountcolumns.css');
 :root{
     --badge-size: 22px; /*discord defualt = 18px, theme defualt = 22px;*/
     --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
