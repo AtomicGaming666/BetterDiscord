@@ -160,6 +160,11 @@
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
+
+.side-2ur1Qk>:where(.bd-sidebar-header,[class*=-tab],[class*=-tab]+.separator-2wx7h6) {
+  order: -1;
+}
+
 /* Floating Folder */
 .wrapper-38slSD:active {
     -webkit-transform: unset;
